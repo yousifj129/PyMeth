@@ -9,6 +9,14 @@ class NumericalMeth():
         d = (f(x+delta_x)-f(x))/delta_x
         
         return np.round(d,rounding)
+    
+    def integral(f:callable,a,b,number_of_bars:float):
+        delta_x = (b-a)/number_of_bars
+        sum = 0
+        for k in range(number_of_bars):
+            sum = sum + f(a + k*delta_x)*delta_x
+
+        return sum
 
     
 
