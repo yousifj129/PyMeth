@@ -4,4 +4,4 @@ from methlib.PyMeth import *
 def square(x):
     return x**2
 
-print(NumericalMeth.derivative(square,400))
+print(NumericalMeth.derivative(square,20))
