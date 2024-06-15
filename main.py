@@ -8,3 +8,4 @@ X = np.array(range(10))
 
 print(NumericalMeth.integral(square,0,5,1000))
 
+    
