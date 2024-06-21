@@ -9,6 +9,11 @@ class NumericalMeth():
         d = (f(x+delta_x)-f(x))/delta_x
         return np.round(d,rounding)
     
+    def derivative_func_with_func(f:callable,g:callable,x, delta_x = 0.001, rounding=3):
+        # calculate the derivative at any point x
+        d = (f(x+delta_x)-f(x))/(g(x+delta_x)-g(x))
+        return np.round(d,rounding)
+
     def integral(f:callable,a,b,number_of_bars:float, rounding=3):
         delta_x = (b-a)/number_of_bars
         sum = 0

@@ -1,7 +1,6 @@
 import methlib.PyMeth as pymeth
 from methlib.PyMeth import *
 
-
 def square(x):
     return 2*x
 
@@ -18,6 +17,11 @@ print(SymbolicMeth.integral(y=y,wi=x))
 
 def f(x):
     return np.sin(np.power(x,2))
+def g(x):
+    return np.cos(x)
 
-mysettings = animationSettings(1280,720,1,0,100,100)
+def p(x):
+    return NumericalMeth.derivative_func_with_func(f,g,x)
+
+mysettings = animationSettings(1280,720,1,0,10,100)
 myAnim = methanimator(f,mysettings)
